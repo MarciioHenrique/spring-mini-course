@@ -1,39 +1,16 @@
 package uenp.site.spring.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class Student {
     private String name;
     private int age;
     private String course;
-
-    public Student(String name, int age, String course) {
-        this.name = name;
-        this.age = age;
-        this.course = course;
-    }
-
-    public Student() {}
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getCourse() {
-        return course;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setCourse(String course) {
-        this.course = course;
-    }
 }
