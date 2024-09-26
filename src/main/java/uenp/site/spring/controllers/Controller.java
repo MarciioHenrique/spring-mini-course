@@ -38,4 +38,9 @@ public class Controller {
     public Student saveStudent(@RequestBody Student student) {
         return studentService.saveStudent(student);
     }
+
+    @DeleteMapping("/student/{id}")
+    public void deleteStudent(@PathVariable Long id) {
+        studentService.deleteStudent(id);
+    }
 }
