@@ -28,4 +28,12 @@ public class StudentService {
     public void deleteStudent(Long id) {
         studentRepository.deleteById(id);
     }
+
+    public Student updateStudent(Long id, Student student) {
+        Student studentToUpdate = studentRepository.findById(id).get();
+        studentToUpdate.setName(student.getName());
+        studentToUpdate.setAge(student.getAge());
+        studentToUpdate.setCourse(student.getCourse());
+        return studentRepository.save(studentToUpdate);
+    }
 }
