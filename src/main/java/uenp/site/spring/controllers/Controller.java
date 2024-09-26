@@ -19,6 +19,16 @@ public class Controller {
         return "Hello World!";
     }
 
+    @GetMapping("/student/{id}")
+    public String getStudentById(@PathVariable String id) {
+        return id;
+    }
+
+    @GetMapping("/student/param")
+    public String getParam(@RequestParam String name) {
+        return name;
+    }
+
     @GetMapping("/student")
     public List<Student> getStudent() {
         return studentService.getStudent();
