@@ -20,8 +20,8 @@ public class Controller {
     }
 
     @GetMapping("/student/{id}")
-    public String getStudentById(@PathVariable String id) {
-        return id;
+    public Student getStudentById(@PathVariable Long id) {
+        return studentService.getStudentById(id);
     }
 
     @GetMapping("/student/param")
